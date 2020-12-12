@@ -21,8 +21,10 @@
 
 </thead>
 <tbody>
-
-<tr> 
+ 
+<tr th:each="Categoria :${categoria}">
+    
+ <td ch:text ="${Categoria.nombre}" ></td>
   <td>
     COMIDA  
   </td>  
