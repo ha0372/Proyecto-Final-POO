@@ -1,5 +1,9 @@
 package com.unab.SpringApp.DAO;
 
-public interface BebidaDAO {
+import org.springframework.data.repository.CrudRepository;
+
+import com.unab.SpringApp.Entidades.Bebida;
+
+public interface BebidaDAO extends CrudRepository<Bebida, Long>{
 
 }
