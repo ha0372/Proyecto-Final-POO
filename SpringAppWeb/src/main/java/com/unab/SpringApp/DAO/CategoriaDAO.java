@@ -1,5 +1,9 @@
 package com.unab.SpringApp.DAO;
 
-public interface CategoriaDAO {
+import org.springframework.data.repository.CrudRepository;
+
+import com.unab.SpringApp.Entidades.Categoria;
+
+public interface CategoriaDAO extends CrudRepository<Categoria, Long>{
 
 }
