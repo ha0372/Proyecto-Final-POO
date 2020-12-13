@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th"http://www.thymealft.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href= "@{estilo.css}" >
+<link rel ="stylesheet" th:href="@{estilo.css}">
 </head>
 <body>
     <div class="menu">
@@ -15,5 +15,20 @@
             <li><a href="#">Horarios</a></li>
         </ul>
     </div>
+<table border="1"> 
+<thead >
+    <th> NOMBRE </th>   
+</thead>
+<tbody>
+ 
+<tr th:each="Categoria :${categoria}">
+    
+ <td th:text="${Categoria.nombre}"></td>
+ 
+</tr>
+</tbody>
+
+
+</table>
 </body>
 </html>

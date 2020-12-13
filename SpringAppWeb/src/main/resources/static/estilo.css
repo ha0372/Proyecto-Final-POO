@@ -6,6 +6,13 @@
     box-sizing: border-box;
 
 }
+body{
+    background-image: url(comidas-mundo.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+
+}
 
 .menu {
 
