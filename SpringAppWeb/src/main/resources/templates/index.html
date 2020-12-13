@@ -17,17 +17,14 @@
     </div>
 <table border="1"> 
 <thead >
-    <th> nombre</th>   
-
+    <th> NOMBRE </th>   
 </thead>
 <tbody>
  
 <tr th:each="Categoria :${categoria}">
     
- <td ch:text ="${Categoria.nombre}" ></td>
-  <td>
-    COMIDA  
-  </td>  
+ <td th:text="${Categoria.nombre}"></td>
+ 
 </tr>
 </tbody>
 
