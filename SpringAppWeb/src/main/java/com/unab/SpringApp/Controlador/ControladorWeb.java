@@ -22,5 +22,7 @@ public class ControladorWeb {
 		m.addAttribute("categoria",Mcategoria);
 		
 		return"index";
+		
+		
 	}
 }
