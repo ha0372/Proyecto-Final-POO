@@ -8,20 +8,32 @@
 <body>
 <a class="btn btn-dark" th:href="@{/}">VOLVER</a> <br><br>
 
-<table  class="table"> 
-<thead class="thead-dark">
+<div class="container mt-5">
+<div th:each="comida : ${comida}">
 
-    <th> NOMBRE </th>
-    <th> PRECIO </th>   
-</thead>
-<tbody>
+<div class ="row justiy-content-center">
+<img class= "https://assets.entrepreneur.com/content/3x2/2000/20181226163637-CocaCola.jpeg" alt=""
+width="350"
+ height="250">
+<div class= "card m-1 p-1" style="width:30%">
+<div class= "row">
+<div class "col-md-2">
+
  
-<tr th:each="comida :${comida}">  
-<td th:text="${comida.nombre}"></td>
-<td th:text="${comida.precio}"></td>
+</div>
+<div class= "col-md-5 mt-3">
+
+<h3 th:text="${comida.nombre}"></h3>
+<h7 th:text="${comida.precio}"></h7>
+</div>
+<div class "col-md-2">
  
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
