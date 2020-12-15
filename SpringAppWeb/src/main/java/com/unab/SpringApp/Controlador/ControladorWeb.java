@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.unab.SpringApp.DAO.BebidaDAO;
 import com.unab.SpringApp.DAO.CategoriaDAO;
 import com.unab.SpringApp.DAO.ComidaDAO;
 import com.unab.SpringApp.Entidades.Categoria;
@@ -35,5 +36,17 @@ public class ControladorWeb {
 			 
 	 
 	}
+
+
+private BebidaDAO bebiDAO;
+ @GetMapping("/bebidat")
+ public String bebidah(Model mode) {
+ mode.addAttribute("bebida",bebiDAO.findAll());
+  
+ return"bebidah";
+		 
+ 
+}
+	 
 	
 }
