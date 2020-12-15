@@ -31,7 +31,7 @@ public class ControladorWeb {
 	 public String comidat(Model model) {
 	 model.addAttribute("comida",coDAO.findAll());
 	  
-	 return"comidas";
+	 return"comidasl";
 			 
 	 
 	}
