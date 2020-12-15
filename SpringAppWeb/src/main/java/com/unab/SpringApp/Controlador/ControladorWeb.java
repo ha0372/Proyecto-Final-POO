@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.unab.SpringApp.DAO.BebidaDAO;
 import com.unab.SpringApp.DAO.CategoriaDAO;
 import com.unab.SpringApp.DAO.ComidaDAO;
+import com.unab.SpringApp.Entidades.Bebida;
 import com.unab.SpringApp.Entidades.Categoria;
+import com.unab.SpringApp.Entidades.Comida;
 
 @Controller
 public class ControladorWeb {
@@ -26,27 +28,20 @@ public class ControladorWeb {
 		return"index";
 		
 	}
+@GetMapping("/comida")
+public String comida(Model comida) {
+
 	
-	private ComidaDAO coDAO;
-	 @GetMapping("/comidat")
-	 public String comidat(Model model) {
-	 model.addAttribute("comida",coDAO.findAll());
-	  
-	 return"comidasl";
-			 
-	 
-	}
-
-
-private BebidaDAO bebiDAO;
- @GetMapping("/bebidat")
- public String bebidah(Model mode) {
- mode.addAttribute("bebida",bebiDAO.findAll());
-  
- return"bebidah";
-		 
- 
+	return"comidasl";
 }
+
+@GetMapping("/bebida")
+public String bebida(Model bebida) {
+	
+	return"bebidah";
+}
+ 
+
 	 
 	
 }
