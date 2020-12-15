@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.unab.SpringApp.DAO.CategoriaDAO;
+import com.unab.SpringApp.DAO.ComidaDAO;
 import com.unab.SpringApp.Entidades.Categoria;
 
 @Controller
@@ -23,6 +24,16 @@ public class ControladorWeb {
 		
 		return"index";
 		
-		
 	}
+	
+	private ComidaDAO coDAO;
+	 @GetMapping("/comidat")
+	 public String comidat(Model model) {
+	 model.addAttribute("comida",coDAO.findAll());
+	  
+	 return"comidas";
+			 
+	 
+	}
+	
 }
