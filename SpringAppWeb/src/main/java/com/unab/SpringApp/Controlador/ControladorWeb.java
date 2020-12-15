@@ -17,6 +17,7 @@ public class ControladorWeb {
 
 	@Autowired
 	private CategoriaDAO seDAO;
+
 	
 	@GetMapping("/")
 	public String Inicio(Model m) {
@@ -28,19 +29,7 @@ public class ControladorWeb {
 		return"index";
 		
 	}
-@GetMapping("/comida")
-public String comida(Model comida) {
 
-	
-	return"comidasl";
-}
-
-@GetMapping("/bebida")
-public String bebida(Model bebida) {
-	
-	return"bebidah";
-}
- 
 
 	 
 	
